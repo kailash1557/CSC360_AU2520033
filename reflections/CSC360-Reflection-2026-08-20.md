@@ -1,0 +1,9 @@
+# CSC360 Reflection — 20/08/2026
+
+The session opened with a quick discussion on markdown conventions for writing our reflections properly, then moved into actually implementing the square logic from last class in real Java code. We went through JFrame as the container class that represents the actual window, and how setVisible(true) is needed to display it. We also covered adding components with add, setting the frame size, and using the override annotation as a safeguard so the compiler catches mistakes if the method signature is wrong. Inside paintComponent, calling super.paintComponent first ensures the parent JPanel is properly cleared before we draw on top of it. For coloring, Java has predefined colors like red and black available, though RGB values can also be used directly. Instead of using a built in shape method, I drew the square using individual lines following the corner logic from the previous session, then added it to the frame.
+
+We extended this to triangles as well. The coding logic stays mostly the same, except we now work with three points instead of four. To generate a valid triangle from random side lengths, we used the boundary condition where the third side must fall between the difference and the sum of the other two sides.
+
+On the theory side, we compared the three main Java GUI options. AWT relies on native OS components, which can look different across platforms. Swing is lightweight and pure Java, giving direct access to the graphics context, which is what we have been using. JavaFX is the more modern option built for hardware accelerated rendering and more complex layouts.
+
+We also reinforced good repository practices, keeping src/main/java, src/test/java, and pom.xml tracked in Git, while excluding generated folders like target and IDE specific settings like .idea through .gitignore, so the repository stays clean across the team.
